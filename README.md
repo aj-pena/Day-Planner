@@ -1,12 +1,12 @@
-# <Day-Planner>
+## <Day-Planner>
 
 ## Description
 
-This Node.js application is run from the command-line. It will generate an HTML webpage for a software engineering team, based on the user input. The HTML webpage will display summaries for each member of the team. The summaries will include email and GitHub profiles info, name, ID and office number, etc.
+This application allows the user to schedule events for a 5 day time frame. It contains slots for every work-day hour that can be used to store event names.
+The times-slots are color-coded to represent past, present and future time-slots.
 
-Communication is an essential part of teamwork. Having an efficient way to accurately reach the right person at the right time can help projects run more smoothly. This application allows for other teams to have an easy way to reach the right member of the team, depending on their needs.
+With this application I expect to learn to use the MomentJs date and time library, Jquery and Bootstrapp.
 
-This application will help me practice constructors, polymorphism, promises, testing and classes.
 
 ## Table of Contents
 
@@ -37,6 +37,7 @@ Select a color-coded timeslot and type in the name of the event you would like t
 
 ## Credits
 
+- [MomentJs] : link to primary web presence
 - [Bootstrap] : link to primary web presence
 - [JQuery] : link to primary web presence
 
@@ -49,6 +50,7 @@ Select a color-coded timeslot and type in the name of the event you would like t
 
 ## Features
 
+- MomentJs
 - Bootstrap
 - JQuery
 
