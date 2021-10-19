@@ -27,14 +27,14 @@ for (let i = 0; i<hours.length; i++){
     save.addClass('col-1 col-md-1 col-xl-1 saveBtn');
        
              // creating <button> with icon and appending to 'save'
-    // let span = $('<span>');
-    // span.button({
-    //      icon: "ui-icon-gear"
-    // });
-    // // save.append(span);
+    let iEl = $('<i>');
+    iEl.addClass('fa fa-save');
+    save.append(iEl);
+
     // appends columns to the row
     row.append(hour,block,save);
 
     // CONTAINER - appends rows to the container
     $('.container').append(row);
+    
 }

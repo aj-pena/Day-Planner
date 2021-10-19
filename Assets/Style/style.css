@@ -70,6 +70,7 @@ textarea {
   background-color: #06aed5;
   color: white;
   border-top: 1px solid white;
+  padding-top: 3%;
 }
 
 .saveBtn i:hover {
