@@ -13,18 +13,26 @@ for (let i = 0; i<hours.length; i++){
     // COLUMNS - create 3 columns inside each row
         // creating hour divs for left column
     let hour = $('<div>');
-    hour.addClass('col-3 col-md-2 col-xl-2 hour');
+    hour.addClass('col-1 col-md-1 col-xl-1 hour');
     hour.text(hours[i]);
         // creating block divs for middle column
     let block = $('<div>');
-    block.addClass('col-8 col-md-9 col-xl-9');
+    block.addClass('col-10 col-md-10 col-xl-10');
            // creating <textarea> for middle column (block)
     let textArea = $('<textarea>');
-    textArea.attr({'id':hours[i], 'name':'task', 'placeholder':'Type your task here', 'cols':'95', 'rows':'4'});
+    textArea.attr({'id':hours[i], 'name':'task', 'class':'past', 'placeholder':'Type your task here', 'cols':'108', 'rows':'4'});
     block.append(textArea);
-        // creating save divs for right column
+        // creating save divs for right column 
     let save = $('<div>');
     save.addClass('col-1 col-md-1 col-xl-1 saveBtn');
+       
+             // creating <button> with icon and appending to 'save'
+    // let span = $('<span>');
+    // span.button({
+    //      icon: "ui-icon-gear"
+    // });
+    // // save.append(span);
+    // appends columns to the row
     row.append(hour,block,save);
 
     // CONTAINER - appends rows to the container
