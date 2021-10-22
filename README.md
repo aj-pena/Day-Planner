@@ -37,16 +37,19 @@ Select a color-coded timeslot and type in the name of the event you would like t
 
 ## Credits
 
-- [MomentJs] : link to primary web presence
-- [Bootstrap] : link to primary web presence
-- [JQuery] : link to primary web presence
+- [MomentJs](https://momentjs.com/docs/)
+- [Bootstrap](https://getbootstrap.com/)
+- [JQuery](https://jquery.com/)
+- [w3schools](https://www.w3schools.com/)
+- [StackOverflow](https://stackoverflow.com/)
+- [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
 
 
 ## GitHub
 
 [Visit Repo](https://github.com/aj-pena/Day-Planner.git)
 
-[Visit deployed page]()
+[Visit deployed page](https://aj-pena.github.io/Day-Planner/)
 
 ## Features
 

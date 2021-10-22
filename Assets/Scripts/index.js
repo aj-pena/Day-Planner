@@ -24,7 +24,7 @@ console.log(tasks);
 for (let i = 9; i<18; i++){
     let hh = today.hour(i).format('HH');
     
-    console.log(tasks[hh]);
+    // console.log(tasks[hh]);
     // console.log(now);
     
     //ROWS - Create rows for each time block in the hours array 
