@@ -1,16 +1,17 @@
 let today = moment();
 let now = moment().hour();
-const tasks = {
-    09: 'test',
-    10: null,
-    11: null,
-    12: null,
-    13: null,
-    14: null,
-    15: null,
-    16: null,
-    17: 'test',
-};
+const tasks = JSON.parse(localStorage.getItem('tasks') ||
+`{
+    "09": null,
+    "10": null,
+    "11": null,
+    "12": null,
+    "13": null,
+    "14": null,
+    "15": null,
+    "16": null,
+    "17": null
+}`);
 
 // Returning today's date in dddd, MMM Do YYYY format
 $('#currentDay').text(today.format('dddd, MMM Do YYYY'));
@@ -19,11 +20,12 @@ $('#currentDay').text(today.format('dddd, MMM Do YYYY'));
 // let hours = ['9 AM','10 AM','11 AM','12 M','1 PM','2 PM','3 PM','4 PM','5 PM'];
 
 // Dynamically generate timeblocks
+console.log(tasks);
 for (let i = 9; i<18; i++){
     let hh = today.hour(i).format('HH');
     
-    console.log(hh);
-    console.log(now);
+    console.log(tasks[hh]);
+    // console.log(now);
     
     //ROWS - Create rows for each time block in the hours array 
     let row = $('<div>');
@@ -39,12 +41,16 @@ for (let i = 9; i<18; i++){
            // creating <textarea> for middle column (block)
     let textArea = $('<textarea>');
     textArea.attr({'id':'txtArea'+hh, 'name':'task', 'placeholder':'Type your task here', 'cols':'108', 'rows':'4'});
-    textArea.value = tasks['09'];
+    textArea.val(tasks[hh]);
     block.append(textArea);
         // creating save divs for right column 
     let save = $('<div>');
     save.addClass('col-1 col-md-1 col-xl-1 saveBtn');
     save.attr('id',hh);
+    save.on('click',function(){
+        tasks[hh] = textArea.val();
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    })
     
     // In for loop I will call a function that returns 'future', 'present' or 'past' class depending on the moment
             
@@ -71,11 +77,4 @@ for (let i = 9; i<18; i++){
     $('.container').append(row);    
 }
 
-$('.container').on('click', '.saveBtn', function(event){
-    for(const key in tasks){
-        if(key === event.target.id){
-            tasks = event.target.syblings('textarea').value;
-        }    
-    }
-    localStorage.setItem('tasks', JSON.stringify(tasks));   
-});
+
